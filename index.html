@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Secure Photo</title>
+
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 28px;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      width: 200px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff7b00;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    button:hover {
+      background-color: #ff5500;
+    }
+
+    img {
+      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 0px 15px black;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<h2>🔐 Enter Password</h2>
+
+<input type="password" id="pass" placeholder="Enter password">
+<button onclick="checkPass()">Submit</button>
+
+<br><br>
+
+<img id="photo" src="lv_0_20260329210953.jpg" style="display:none; width:300px;">
+
+<script>
+function checkPass() {
+  var p = document.getElementById("pass").value;
+  
+  if(p === "friends") {
+    document.getElementById("photo").style.display = "block";
+  } else {
+    alert("❌ Wrong Password!");
+  }
+}
+</script>
+
+</body>
+</html>
